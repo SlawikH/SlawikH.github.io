@@ -1,3 +1,4 @@
+// Navbar background scroll
 $(function() {
     $(document).scroll(function(){
         var $nav = $('.nav');
@@ -6,7 +7,7 @@ $(function() {
 });
 
 
-
+// Navbar
 var menu = document.getElementById("bar");
 var items = document.getElementById("navbar");
 
@@ -36,8 +37,18 @@ function actionToggle() {
 }
 
 
-// document.onclick = function (e) {
-//     if(e.target.classList !== 'active') {
-//         toggle.classList.remove('action')
-//     }
-// }
+// Comments
+const showContainers = document.querySelectorAll(".show-replies");
+
+showContainers.forEach((btn) =>
+  btn.addEventListener("click", (e) => {
+    let parentContainer = e.target.closest(".comment__container");
+    let _id = parentContainer.id;
+    if (_id) {
+      let childrenContainer = parentContainer.querySelectorAll(
+        `[dataset=${_id}]`
+      );
+      childrenContainer.forEach((child) => child.classList.toggle("opened"));
+    }
+  })
+);
