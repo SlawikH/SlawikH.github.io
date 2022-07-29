@@ -65,7 +65,7 @@ h6{
 .action {
     position: fixed;
     bottom: 1rem;
-    left: 1rem;
+    right: 10px;
     width: 3rem;
     height: 3rem;
     background: #fff;
@@ -101,7 +101,8 @@ h6{
 
 .action ul {
     position: absolute;
-    bottom: 55px;
+    right: 0;
+    bottom: -10px;
     background: #fff;
     min-width: 250px;
     padding: 20px;
@@ -110,10 +111,11 @@ h6{
     visibility: hidden;
     transition: 0.3s;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    z-index: 99;
 }
 
 .action.active ul {
-    bottom: 70px;
+    bottom: 4rem;
     opacity: 1;
     visibility: visible;
     transition: 0.3s;
@@ -419,8 +421,9 @@ h6{
 .pricing .table {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .pricing .basic {
@@ -428,6 +431,7 @@ h6{
     height: 100%;
     border: 1px solid #535cf1;
     border-radius: 20px;
+    margin-top: 1.5rem;
 }
 
 .pricing .basic h3 {
