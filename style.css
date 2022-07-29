@@ -740,7 +740,7 @@ footer .second-row .newsletter input {
 
 footer .second-row .newsletter input::placeholder {
     opacity: 1;
-    color: #6c6c6c;
+    color: #6c6c6d;
 }
 
 footer .second-row .newsletter button {
